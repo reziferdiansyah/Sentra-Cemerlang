@@ -1,17 +1,19 @@
-import { Typography, Button, Input } from "@material-tailwind/react";
+import {Button, Input, IconButton } from "@material-tailwind/react";
+import Image from "next/image";
+import * as Icon from 'react-feather';
 
 const LINKS = [
   {
-    title: "Company",
-    items: ["About Us", "Careers", "Premium Tools", "Blog"],
+    title: "Sekilas Kami",
+    items: ["CV. Sagara Inovasi berdiri untuk memberikan pelayanan khususnya dibidang pembuatan produk berbasis polyurethane dan rubber."],
   },
   {
-    title: "Pages",
-    items: ["Login", "Register", "Add List", "Contact"],
+    title: "Kontak Kami",
+    items: ["0878-2112-5779", "0878-2112-5779", "sagara.inovasi@gmail.com", ],
   },
   {
-    title: "Legal",
-    items: ["Terms", "Privacy", "Team", "About Us"],
+    title: "Alamat Kami",
+    items: ["Perum Lebakwangi Asri Blk. D4 No.28 RT.04 RW.13 Desa: Lebakwangi Kec: Arjasri Kab: Bandung Jawa Barat Indonesia 40379"],
   },
 ];
 
@@ -19,74 +21,71 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="px-8 pt-24 pb-8">
-      <div className="container max-w-6xl flex flex-col mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 !w-full ">
-          <div className="flex col-span-2 items-center gap-10 mb-10 lg:mb-0 md:gap-36">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography variant="h6" color="blue-gray" className="mb-4">
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      className="py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
+    <footer className="px-4 pt-24 pb-8 bg-blue-500 text-white">
+      <div className="container flex flex-col mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-4 !w-full ">
+
+           {/* Card 1 Sekilas Kami */}
+          <div className="m-3">
+          <div className="font-normal mb-4 text-base">
+             Sekilas Kami
+            </div>
+            <div className="font-normal mb-4 text-base">
+              Sentra Gemilang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
+            </div>
           </div>
-          <div className="">
-            <Typography variant="h6" className="mb-3 text-left">
-              Subscribe
-            </Typography>
-            <Typography className="!text-gray-500 font-normal mb-4 text-base">
-              Get access to subscriber exclusive deals and be the first who gets
-              informed about fresh sales.
-            </Typography>
-            <Typography variant="small" className="font-medium mb-2 text-left">
-              Your Email
-            </Typography>
-            <div className="flex mb-3 flex-col lg:flex-row items-start gap-4">
-              <div className="w-full">
-                {/* @ts-ignore */}
-                <Input label="Email" color="gray" />
-                <Typography className="font-medium mt-3 !text-sm !text-gray-500 text-left">
-                  I agree the{" "}
-                  <a
-                    href="#"
-                    className="font-bold underline hover:text-gray-900 transition-colors"
-                  >
-                    Terms and Conditions{" "}
-                  </a>
-                </Typography>
-              </div>
-              <Button color="gray" className="w-full lg:w-fit" size="md">
-                button
-              </Button>
+           {/* Card 2 Kontak Kami */}
+           <div className="m-3">
+           <div className="font-normal mb-4 text-base">
+             Kontak Kami
+            </div>
+            <div className="font-normal mb-1 text-base">
+              <div className="ml-1 flex"><i className="fa-brands fa-whatsapp text-2xl" /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Phone /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Mail /><p className="ml-1">sentra.gemilang@gmail.com</p></div>
+            </div>
+          </div>
+           {/* Card 3 Alamat Kami*/}
+           <div className="m-1">
+           <div className="font-normal mb-4 text-base">
+              Alamat Kami
+              <div className="bg-red-500 w-20"><hr /> </div>
+            </div>
+            <div className="font-normal mb-4 text-base">
+             <div className="flex"><Icon.MapPin /><p className="ml-1"> Jalan Alam Raya </p></div>
+             <p className="ml-6">No. 22, Kec. Bojongsoang, Desa Buahbatu, RT 05/RW 01, Samping Komplek Kamarasan, Kabupaten Bandung, Jawa Barat, Indonesia - 40292</p>
+            </div>
+          </div>
+           {/* Card 4 */}
+           <div className="m-3">
+           <Image width={768} height={768}  src="https://www.polyurethaneindonesia.com/wp-content/uploads/2023/05/logo-polyurethane.png" alt="logocompany" />
+            <div className="font-normal mb-4 text-base flex gap-2 mt-2">
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Instagram />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Facebook />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Twitter />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Youtube />
+            </a>
             </div>
           </div>
         </div>
-        <Typography
+        <div
           color="blue-gray"
-          className="md:text-center mt-16 font-normal !text-gray-700"
+          className="md:text-center mt-16 font-normal text-white"
         >
           &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
-        </Typography>
+          Sentra Gemilang. All Rights Reserved
+        </div>
       </div>
     </footer>
   );

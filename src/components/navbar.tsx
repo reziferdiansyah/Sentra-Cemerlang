@@ -65,7 +65,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
-          Material Tailwind
+        Sentra Cemerlang
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -83,6 +83,13 @@ export function Navbar() {
             size="sm"
           >
             <i className="fa-brands fa-twitter text-base" />
+          </IconButton>
+          <IconButton
+            variant="text"
+            color={isScrolling ? "gray" : "white"}
+            size="sm"
+          >
+            <i className="fa-brands fa-whatsapp text-base" />
           </IconButton>
           <IconButton
             variant="text"
@@ -122,6 +129,9 @@ export function Navbar() {
           <div className="mt-4 flex gap-2">
             <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-twitter text-base" />
+            </IconButton>
+            <IconButton variant="text" color="gray" size="sm">
+              <i className="fa-brands fa-whatsapp text-base" />
             </IconButton>
             <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-facebook text-base" />
