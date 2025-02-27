@@ -1,5 +1,6 @@
-import { Typography, Button, Input, IconButton } from "@material-tailwind/react";
+import {Button, Input, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
+import * as Icon from 'react-feather';
 
 const LINKS = [
   {
@@ -25,54 +26,66 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-4 !w-full ">
 
            {/* Card 1 Sekilas Kami */}
-          <div className="m-1 bg-yellow-500">
-          <Typography className="font-normal mb-4 text-base">
+          <div className="m-3">
+          <div className="font-normal mb-4 text-base">
              Sekilas Kami
-            </Typography>
-            <Typography className="font-normal mb-4 text-base">
-             CV. Sagara Inovasi berdiri untuk memberikan pelayanan khususnya dibidang pembuatan produk berbasis polyurethane dan rubber.
-            </Typography>
+            </div>
+            <div className="font-normal mb-4 text-base">
+              Sentra Gemilang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
+            </div>
           </div>
            {/* Card 2 Kontak Kami */}
-           <div className="m-1 bg-red-500">
-           <Typography className="font-normal mb-4 text-base">
+           <div className="m-3">
+           <div className="font-normal mb-4 text-base">
              Kontak Kami
-            </Typography>
-            <Typography className="font-normal mb-1 text-base">
-              <span className="ml-1">0878-2112-5779</span>
-            </Typography>
-            <Typography className="font-normal mb-1 text-base">
-            <span className="ml-1">0878-2112-5779</span>
-            </Typography>
-            <Typography className="font-normal mb-1 text-base">
-             <span className="ml-1"> sagara.inovasi@gmail.com</span>
-            </Typography>
+            </div>
+            <div className="font-normal mb-1 text-base">
+              <div className="ml-1 flex"><i className="fa-brands fa-whatsapp text-2xl" /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Phone /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Mail /><p className="ml-1">sentra.gemilang@gmail.com</p></div>
+            </div>
           </div>
            {/* Card 3 Alamat Kami*/}
-           <div className="m-1 bg-green-500">
-           <Typography className="font-normal mb-4 text-base">
+           <div className="m-1">
+           <div className="font-normal mb-4 text-base">
               Alamat Kami
-            </Typography>
-            <Typography className="font-normal mb-4 text-base">
-              Perum Lebakwangi Asri Blk. D4 No.28 RT.04 RW.13 Desa: Lebakwangi Kec: Arjasri Kab: Bandung Jawa Barat Indonesia 40379
-            </Typography>
+              <div className="bg-red-500 w-20"><hr /> </div>
+            </div>
+            <div className="font-normal mb-4 text-base">
+             <div className="flex"><Icon.MapPin /><p className="ml-1"> Jalan Alam Raya </p></div>
+             <p className="ml-6">No. 22, Kec. Bojongsoang, Desa Buahbatu, RT 05/RW 01, Samping Komplek Kamarasan, Kabupaten Bandung, Jawa Barat, Indonesia - 40292</p>
+            </div>
           </div>
            {/* Card 4 */}
-           <div className="m-1 bg-gray-500">
+           <div className="m-3">
            <Image width={768} height={768}  src="https://www.polyurethaneindonesia.com/wp-content/uploads/2023/05/logo-polyurethane.png" alt="logocompany" />
-            <Typography className="font-normal mb-4 text-base">
-              Get access to subscriber exclusive deals and be the first who gets
-              informed about fresh sales.
-            </Typography>
+            <div className="font-normal mb-4 text-base flex gap-2 mt-2">
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Instagram />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Facebook />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Twitter />
+            </a>
+            <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
+            <Icon.Youtube />
+            </a>
+            </div>
           </div>
         </div>
-        <Typography
+        <div
           color="blue-gray"
           className="md:text-center mt-16 font-normal text-white"
         >
           &copy; {CURRENT_YEAR} Made with{" "}
           Sentra Gemilang. All Rights Reserved
-        </Typography>
+        </div>
       </div>
     </footer>
   );
