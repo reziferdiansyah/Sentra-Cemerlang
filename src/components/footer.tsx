@@ -49,7 +49,7 @@ export function Footer() {
              <div className="w-8 border boder-b-2 border-white"><hr /> </div>
             </div>
             <div className="font-normal mb-4 text-sm">
-              Sentra Gemilang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
+              Sentra Cemerlang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
             </div>
           </div>
            {/* Card 2 Kontak Kami */}
@@ -85,7 +85,7 @@ export function Footer() {
           className="md:text-center mt-16 font-normal text-white"
         >
           &copy; {CURRENT_YEAR} Made with{" "}
-          Sentra Gemilang. All Rights Reserved
+          Sentra Cemerlang. All Rights Reserved
         </div>
       </div>
     </footer>
