@@ -1,12 +1,13 @@
 import React from "react";
 import {
-  Navbar as MTNavbar,
   Collapse,
   IconButton,
   Typography,
   Button,
 } from "@material-tailwind/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -56,21 +57,15 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+    <div
+      className="fixed top-0 z-50 border-0 bg-white w-full shadow-xl"
     >
       <div className="container mx-auto flex items-center justify-between">
-        <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
-        Sentra Cemerlang
-        </Typography>
+        <div className="m-2">
+         <Image width={125} height={125}  src="/image/LogoCompany.png" alt="logocompany" />
+        </div>
         <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
+          className={`ml-10 hidden items-center gap-6 lg:flex text-black font-bold`}
         >
           <NavItem>Home</NavItem>
           <NavItem>About Us</NavItem>
@@ -79,38 +74,51 @@ export function Navbar() {
         <div className="hidden gap-2 lg:flex">
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
             size="sm"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <i className="fa-brands fa-twitter text-base" />
           </IconButton>
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
             size="sm"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <i className="fa-brands fa-whatsapp text-base" />
           </IconButton>
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            color="gray"
             size="sm"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <i className="fa-brands fa-facebook text-base" />
           </IconButton>
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            color="gray"
             size="sm"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <i className="fa-brands fa-instagram text-base" />
           </IconButton>
         </div>
         <IconButton
           variant="text"
-          color={isScrolling ? "gray" : "white"}
+          color="gray"
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
         >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
@@ -127,22 +135,38 @@ export function Navbar() {
             <NavItem>Contact Us</NavItem>
           </ul>
           <div className="mt-4 flex gap-2">
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton 
+             placeholder=""
+             onPointerEnterCapture={() => {}}
+             onPointerLeaveCapture={() => {}}
+             variant="text" color="gray"  size="sm">
               <i className="fa-brands fa-twitter text-base" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton 
+             placeholder=""
+             onPointerEnterCapture={() => {}}
+             onPointerLeaveCapture={() => {}}
+             variant="text" color="gray" size="sm">
               <i className="fa-brands fa-whatsapp text-base" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton 
+             placeholder=""
+             onPointerEnterCapture={() => {}}
+             onPointerLeaveCapture={() => {}}
+             variant="text" color="gray" size="sm">
               <i className="fa-brands fa-facebook text-base" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton 
+             placeholder=""
+             onPointerEnterCapture={() => {}}
+             onPointerLeaveCapture={() => {}}
+             variant="text" color="gray" size="sm">
               <i className="fa-brands fa-instagram text-base" />
             </IconButton>
           </div>
         </div>
       </Collapse>
-    </MTNavbar>
+    </div>
   );
 }
 

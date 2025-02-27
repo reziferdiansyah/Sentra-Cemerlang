@@ -24,44 +24,8 @@ export function Footer() {
     <footer className="px-4 pt-24 pb-8 bg-blue-600 text-white">
       <div className="container flex flex-col mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 !w-full ">
-
-           {/* Card 1 Sekilas Kami */}
-          <div className="m-3">
-          <div className="font-normal mb-4 text-base">
-             Sekilas Kami
-            </div>
-            <div className="font-normal mb-4 text-base">
-              Sentra Gemilang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
-            </div>
-          </div>
-           {/* Card 2 Kontak Kami */}
-           <div className="m-3">
-           <div className="font-normal mb-4 text-base">
-             Kontak Kami
-            </div>
-            <div className="font-normal mb-1 text-base">
-              <div className="ml-1 flex"><i className="fa-brands fa-whatsapp text-2xl" /><p className="ml-1">0878-2112-5779</p></div>
-            </div>
-            <div className="font-normal mb-1 text-base">
-            <div className="ml-1 flex"><Icon.Phone /><p className="ml-1">0878-2112-5779</p></div>
-            </div>
-            <div className="font-normal mb-1 text-base">
-            <div className="ml-1 flex"><Icon.Mail /><p className="ml-1">sentra.gemilang@gmail.com</p></div>
-            </div>
-          </div>
-           {/* Card 3 Alamat Kami*/}
-           <div className="m-1">
-           <div className="font-normal mb-4 text-base">
-              Alamat Kami
-              <div className="bg-red-500 w-20"><hr /> </div>
-            </div>
-            <div className="font-normal mb-4 text-base">
-             <div className="flex"><Icon.MapPin /><p className="ml-1"> Jalan Alam Raya </p></div>
-             <p className="ml-6">No. 22, Kec. Bojongsoang, Desa Buahbatu, RT 05/RW 01, Samping Komplek Kamarasan, Kabupaten Bandung, Jawa Barat, Indonesia - 40292</p>
-            </div>
-          </div>
-           {/* Card 4 */}
-           <div className="m-3">
+        {/* Card 4 */}
+         <div className="m-3">
            <Image width={768} height={768}  src="/image/LogoCompany.png" alt="logocompany" />
             <div className="font-normal mb-4 text-base flex gap-2 mt-2">
             <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
@@ -76,6 +40,43 @@ export function Footer() {
             <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
             <Icon.Youtube />
             </a>
+            </div>
+          </div>
+           {/* Card 1 Sekilas Kami */}
+          <div className="m-3">
+          <div className="font-normal mb-4 text-base">
+             Tentang Kami
+             <div className="w-8 border boder-b-2 border-white"><hr /> </div>
+            </div>
+            <div className="font-normal mb-4 text-base">
+              Sentra Gemilang didirikan untuk memproduksi dan memperbaiki berbagai jenis roll, roda, bushings, mounting, dan suku cadang lainnya yang terbuat dari berbagai jenis material seperti karet (rubber) dan poliuretan (polyurethane)
+            </div>
+          </div>
+           {/* Card 2 Kontak Kami */}
+           <div className="m-3">
+           <div className="font-normal mb-4 text-base">
+             Kontak 
+            <div className="w-8 border boder-b-2 border-white"><hr /> </div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+              <div className="ml-1 flex"><i className="fa-brands fa-whatsapp text-2xl" /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Phone /><p className="ml-1">0878-2112-5779</p></div>
+            </div>
+            <div className="font-normal mb-1 text-base">
+            <div className="ml-1 flex"><Icon.Mail /><p className="ml-1">sentra.gemilang@gmail.com</p></div>
+            </div>
+          </div>
+           {/* Card 3 Alamat Kami*/}
+           <div className="m-1">
+           <div className="font-normal mb-4 text-base">
+              Alamat
+              <div className="w-8 border boder-b-2 border-white"><hr /> </div>
+            </div>
+            <div className="font-normal mb-4 text-base">
+             <div className="flex"><Icon.MapPin /><p className="ml-1"> Jalan Alam Raya </p></div>
+             <p className="ml-6">No. 22, Kec. Bojongsoang, Desa Buahbatu, RT 05/RW 01, Samping Komplek Kamarasan, Kabupaten Bandung, Jawa Barat, Indonesia - 40292</p>
             </div>
           </div>
         </div>
