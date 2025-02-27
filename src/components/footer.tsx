@@ -62,7 +62,7 @@ export function Footer() {
           </div>
            {/* Card 4 */}
            <div className="m-3">
-           <Image width={768} height={768}  src="https://www.polyurethaneindonesia.com/wp-content/uploads/2023/05/logo-polyurethane.png" alt="logocompany" />
+           <Image width={768} height={768}  src="/image/LogoCompany.png" alt="logocompany" />
             <div className="font-normal mb-4 text-base flex gap-2 mt-2">
             <a href="https://github.com/reziferdiansyah" className="hover:text-blue-100">
             <Icon.Instagram />
